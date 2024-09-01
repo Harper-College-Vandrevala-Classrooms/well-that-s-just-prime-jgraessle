@@ -17,17 +17,48 @@ public class TestFactorizer {
   // Replace the following example tests with your own tests
   // of the prime factorization function.
   @Test
+  public void testNegative() {
+    assertEquals(null, factorizer.Primer(-1));
+  }
+
+  @Test
   public void testZero() {
-    assertEquals(2, factorizer.exampleMethod(0));
+    assertEquals(null, factorizer.Primer(0));
   }
 
   @Test
   public void testOne() {
-    assertEquals(2, factorizer.exampleMethod(1));
+    assertEquals(null, factorizer.Primer(1));
   }
 
   @Test
-  public void testTen() {
-    assertEquals(1, factorizer.exampleMethod(10));
+  public void testTwo() {
+    assertEquals("2 ", factorizer.Primer(2));
   }
+
+  @Test
+  public void testThree() {
+    assertEquals("3 ", factorizer.Primer(3));
+  }
+
+  @Test
+  public void testFour() {
+    assertEquals("2 2 ", factorizer.Primer(4));
+  }
+
+  @Test
+  public void testThirty() {
+    assertEquals("2 3 5 ", factorizer.Primer(30));
+  }
+
+  @Test
+  public void testMeaning() {
+    assertEquals("2 3 7 ", factorizer.Primer(42));
+  }
+
+  @Test
+  public void testHumor() {
+    assertEquals("3 23 ", factorizer.Primer(69));
+  }
+
 }
